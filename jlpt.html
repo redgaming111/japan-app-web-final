@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Làm thử JLPT từ vựng</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<button class="back-btn" onclick="goBack()">
+  ← Trở về học ngữ pháp
+</button>
+
+<h2 class="titleD">📝 Làm thử từ vựng JLPT</h2>
+
+<h3 class="jlpt-title">
+  Bạn làm thử cấp độ nào?
+</h3>
+
+<div class="jlpt-levels">
+  <div class="jlpt-card n5" onclick="goJLPT('N5')">
+    <img src="icons/icon-192.png" alt="JLPT N5">
+    <div class="jlpt-label">N5</div>
+  </div>
+
+  <div class="jlpt-card n4" onclick="goJLPT('N4')">
+    <img src="icons/icon-192.png" alt="JLPT N4">
+    <div class="jlpt-label">N4</div>
+  </div>
+
+  <div class="jlpt-card n3" onclick="goJLPT('N3')">
+    <img src="icons/icon-192.png" alt="JLPT N3">
+    <div class="jlpt-label">N3</div>
+  </div>
+</div>
+
+<div id="quizSection" style="display:none;">
+  <h3 id="quizTitle"></h3>
+  <div id="quizContainer"></div>
+  <button id="submitQuiz">Nộp bài</button>
+  <div id="result"></div>
+</div>
+
+
+<script>
+function goBack() {
+  window.location.href = "index.html";
+}
+</script>
+
+<script src="js/jlpt.js"></script>
+
+</body>
+</html>

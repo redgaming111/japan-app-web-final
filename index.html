@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2e7d32">
+
+  <meta charset="UTF-8">
+  <title>Học tiếng Nhật N5–N3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<h2 class="titleD">App Học Tiếng Nhật (N5 – N3)</h2>
+<select id="level">
+  <option value="">-- Chọn cấp độ --</option>
+  <option value="N5">N5</option>
+  <option value="N4">N4</option>
+  <option value="N3">N3</option>
+
+</select>
+<select id="category">
+  <option value="">-- Chọn nội dung --</option>
+  <option value="vocab">Từ vựng</option>
+  <option value="grammar">Ngữ pháp</option>
+  <option value="kanji">Chữ Hán</option>
+  <option value="reading">Đọc hiểu</option>
+</select>
+
+<br>
+<input id="search" placeholder="Tìm kiếm..." style="width:300px">
+<br><br>
+
+<button id="starQuizBtn" class="quiz-btn mc-btn">
+  ⭐ Quiz từ đã đánh dấu
+</button>
+
+
+<button id="startQuiz" class="quiz-btn mc-btn">🎉 Làm quiz vui nhộn</button>
+<div id="quizBox" class="quiz-card">
+  <div id="streak" class="streak"></div>
+  <h3 id="quizQuestion"></h3>
+  <div id="quizOptions"></div>
+</div>
+
+<button id="jlptBtn" class="jlpt-btn mc-btn">
+  📝 Làm thử JLPT
+</button>
+
+<button id="musicBtn" class="jlpt-btn mc-btn music-btn">
+  🎵 Nhạc
+</button>
+
+<button id="flashcardBtn" class="flashcard-btn jlpt-btn mc-btn">
+  🃏 Học với Flashcard
+</button>
+
+<button onclick="window.location.href='coban.html'" class="jlpt-btn mc-btn">
+  📖 Cơ bản
+</button>
+
+<div id="musicModal" class="music-modal">
+<div class="music-box">
+  <div class="music-header">
+    <span>🎶 Chọn nhạc</span>
+    <button id="closeMusic">✖</button>
+  </div>
+
+  <div class="music-list">
+    <div class="music-item active" data-src="assets/japanese-garden.mp3">
+      Japanese Garden
+    </div>
+    <div class="music-item" data-src="assets/lofidreams-sakura-lofi-ambient-lofi-music-340018.mp3">Calm Sakura</div>
+  </div>
+
+  <div class="music-footer">
+    <button id="stopMusic" class="stop-music-btn">
+      ⏹ Tắt nhạc
+    </button>
+  </div>
+</div>
+</div> 
+
+
+
+<audio id="bgMusic"></audio>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>⭐</th>
+      <th>Nội dung</th>
+      <th>Cách đọc</th>
+      <th>Ý nghĩa</th>
+    </tr>
+  </thead>
+  <tbody id="content"></tbody>
+</table>
+
+
+<div id="pagination">
+  <button id="prevPage">⬅ Trước</button>
+
+  <span id="pageInfo" class="page-text"></span>
+
+  <input id="pageInput" type="number" min="1">
+
+  <span class="page-text">/</span>
+  <span id="totalPage" class="page-text"></span>
+
+  <button id="nextPage">Sau ➡</button>
+</div>
+
+
+
+<button id="helpBtn" class="help-btn mc-btn help-fixed">
+  📘 Cách học hiệu quả
+</button>
+
+<div id="helpModal" class="help-modal">
+  <div class="help-content">
+    <h3>📘 Cách học</h3>
+    <ul>
+      <li>Chọn <b>cấp độ (N5–N3)</b> và <b>nội dung</b> để xem bài học</li>
+      <li>Dùng ô <b>Tìm kiếm</b> để lọc nhanh từ vựng</li>
+      <li>Bấm <b>Làm quiz</b> để tự kiểm tra kiến thức</li>
+      <li>Trả lời đúng liên tiếp để tăng <b>streak</b></li>
+    </ul>
+    <button id="closeHelp" class="close-btn mc-btn">Đã hiểu 👍</button>
+
+
+
+<script src="js/dataN5.js"></script>
+<script src="js/dataN4.js"></script>
+<script src="js/dataN3.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/quiz.js"></script>
+
+
+  </div>
+</div>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+
+
+</body>
+</html>
