@@ -1,7 +1,7 @@
 # 🇯🇵 Japan App Web - Ứng dụng Học Tiếng Nhật Toàn Diện
 
 
-Một ứng dụng web (Progressive Web App - PWA) hỗ trợ học tiếng Nhật từ cơ bản đến nâng cao, tích hợp các công cụ ghi nhớ thông minh giúp tối ưu hóa lộ trình học tập của bạn.
+
 
 [✨ Trải nghiệm ứng dụng ngay tại đây](https://annguyenai.github.io/japan-app-web-final/) 
 
